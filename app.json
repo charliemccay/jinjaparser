@@ -1,0 +1,11 @@
+{
+  "name": "Jinja2 live (web) parser",
+  "description": "Jinja2 live (web) parser",
+  "keywords": ["Jinja2"],
+  "env": {
+    "HOST": {
+      "description": "the IP to bind to",
+      "value": "0.0.0.0"
+    }
+  }
+}
