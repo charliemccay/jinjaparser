@@ -1,7 +1,17 @@
 $(document).ready(function () {
-  window.open('/values', '_blank');
-  window.open('/template', '_blank');
+  // window.open('/values', '');
+  // window.open('/template', '');
   var bc = new BroadcastChannel('parser_channel');
+
+  const openWindow = (str) => {
+    var windowObjectReference = null;
+
+    if (windowObjectReference == null || windowObjectReference.closed) {
+      window.open(str, '', 'resizable,scrollbars,status');
+    } else {
+      windowObjectReference.focus();
+    }
+  };
 
   const data = (function () {
     let values = { template: null, values: null };

@@ -25,7 +25,39 @@
   </head>
 
   <body>
+    <p></p>
+
     <form class="container">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a
+            disable
+            href="/"
+            target="Render"
+            onclick="return false;"
+            title="This link will create a new window or will re-use an already opened one"
+            >Render</a
+          >
+        </li>
+        <li>
+          <a
+            href="/values"
+            target="Values"
+            onclick="openWindow('/values'); return false;"
+            title="This link will create a new window or will re-use an already opened one"
+            >Values</a
+          >
+        </li>
+        <li>
+          <a
+            href="/template"
+            target="Template"
+            onclick="openWindow('/values'); return false;"
+            title="This link will create a new window or will re-use an already opened one"
+            >Template</a
+          >
+        </li>
+      </ul>
       <div class="col-12">
         <h1>Render</h1>
         <div id="render"></div>

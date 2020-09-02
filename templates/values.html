@@ -25,13 +25,44 @@
   </head>
 
   <body>
-    <form class="container">
+    <p></p>
+
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li>
+          <a
+            href="/"
+            target="Render"
+            onclick="openWindow('/values'); return false;"
+            title="This link will create a new window or will re-use an already opened one"
+            >Render</a
+          >
+        </li>
+        <li class="active">
+          <a
+            href="/values"
+            target="Values"
+            onclick="return false;"
+            title="This link will create a new window or will re-use an already opened one"
+            >Values</a
+          >
+        </li>
+        <li>
+          <a
+            href="/template"
+            target="Template"
+            onclick="openWindow('/values'); return false;"
+            title="This link will create a new window or will re-use an already opened one"
+            >Template</a
+          >
+        </li>
+      </ul>
       <div class="row">
         <div class="col-12">
           <h1>Values</h1>
           <textarea id="values">{% include 'example_values.html' %}</textarea>
         </div>
       </div>
-    </form>
+    </div>
   </body>
 </html>

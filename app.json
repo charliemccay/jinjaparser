@@ -1,7 +1,7 @@
 {
-  "name": "Jinja2 live (web) parser",
-  "description": "Jinja2 live (web) parser",
-  "keywords": ["Jinja2"],
+  "name": "Jinja parser",
+  "description": "Jinja parser",
+  "keywords": ["Jinja"],
   "env": {
     "HOST": {
       "description": "the IP to bind to",
