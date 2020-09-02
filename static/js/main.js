@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  // window.open('/values', '');
-  // window.open('/template', '');
   var bc = new BroadcastChannel('parser_channel');
 
   const openWindow = (str) => {

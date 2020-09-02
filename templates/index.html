@@ -3,7 +3,7 @@
   <head>
     <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/convert.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     <link
       rel="shortcut icon"
@@ -25,15 +25,13 @@
   </head>
 
   <body>
-    <p></p>
-
-    <form class="container">
+    <div class="container">
       <ul class="nav nav-tabs">
         <li class="active">
           <a
             disable
             href="/"
-            target="Render"
+            target="_blank"
             onclick="return false;"
             title="This link will create a new window or will re-use an already opened one"
             >Render</a
@@ -42,7 +40,7 @@
         <li>
           <a
             href="/values"
-            target="Values"
+            target="_blank"
             onclick="openWindow('/values'); return false;"
             title="This link will create a new window or will re-use an already opened one"
             >Values</a
@@ -51,8 +49,8 @@
         <li>
           <a
             href="/template"
-            target="Template"
-            onclick="openWindow('/values'); return false;"
+            target="_blank"
+            onclick="openWindow('/template'); return false;"
             title="This link will create a new window or will re-use an already opened one"
             >Template</a
           >
@@ -62,6 +60,6 @@
         <h1>Render</h1>
         <div id="render"></div>
       </div>
-    </form>
+    </div>
   </body>
 </html>
