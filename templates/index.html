@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+      <SCRIPT TYPE="text/javascript">
+          function popup(mylink, windowname) {
+              if (! window.focus)return true;
+              var href;
+              if (typeof(mylink) == 'string') href=mylink;
+              else href=mylink.href;
+              window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+              return false;
+          }
+      </SCRIPT>
 
     <link
       rel="shortcut icon"
@@ -24,39 +35,51 @@
     <title>Render</title>
   </head>
 
-  <body>
+  <body onload="window.name='render'">
     <div class="container">
       <ul class="nav nav-tabs">
-        <li class="active">
-          <a
-            disable
-            href="/"
-            target="_blank"
-            onclick="return false;"
+        <li>
+          <input
+            type="button"
+            value="Render"
             title="This link will create a new window or will re-use an already opened one"
-            >Render</a
-          >
+            onclick="window.open('/','render');this.disabled=false;"
+            />
         </li>
         <li>
-          <a
-            href="/values"
-            target="_blank"
-            onclick="openWindow('/values'); return false;"
+          <input
+            type="button"
+            value="Values"
             title="This link will create a new window or will re-use an already opened one"
-            >Values</a
-          >
+            onclick="window.open('/values','values');this.disabled=true;"
+            />
         </li>
         <li>
-          <a
-            href="/template"
-            target="_blank"
-            onclick="openWindow('/template'); return false;"
+          <input
+            type="button"
+            value="Template"
             title="This link will create a new window or will re-use an already opened one"
-            >Template</a
-          >
+            onclick="window.open('/template','template');this.disabled=true;"
+            />
+        </li>
+                  <li>
+          <input
+            type="button"
+            value="Values reopen"
+            title="This link will create a new window or will re-use an already opened one"
+            onclick="window.open('','values');this.disabled=false;"
+            />
+        </li>
+        <li>
+          <input
+            type="button"
+            value="Template reopen"
+            title="This link will create a new window or will re-use an already opened one"
+            onclick="window.open('','template');this.disabled=false;"
+            />
         </li>
       </ul>
-      <div class="col-12">
+      <div class="col-12" >
         <h1>Render</h1>
         <div id="render"></div>
       </div>

@@ -27,33 +27,30 @@
   <body>
 
     <div class="container">
-      <ul class="nav nav-tabs">
+              <ul class="nav nav-tabs">
         <li>
-          <a
-            href="/"
-            target="_blank"
-            onclick="openWindow('/'); return false;"
+          <input
+            type="button"
+            value="Render"
             title="This link will create a new window or will re-use an already opened one"
-            >Render</a
-          >
+            onclick="window.open('','render');this.disabled=false;"
+            />
         </li>
         <li>
-          <a
-            href="/values"
-            target="_blank"
-            onclick="openWindow('/values'); return false;"
+          <input
+            type="button"
+            value="Values"
             title="This link will create a new window or will re-use an already opened one"
-            >Values</a
-          >
+            onclick="window.open('','values');this.disabled=false;"
+            />
         </li>
-        <li class="active">
-          <a
-            href="/template"
-            target="_blank"
-            onclick="return false;"
+        <li>
+          <input
+            type="button"
+            value="Template"
             title="This link will create a new window or will re-use an already opened one"
-            >Template</a
-          >
+            onclick="window.open('','template');this.disabled=false;"
+            />
         </li>
       </ul>
       <div class="row">
@@ -63,6 +60,7 @@
 {% include 'example_template.html' %}</textarea
           >
         </div>
+      </div>
     </div>
   </body>
 </html>
