@@ -1,0 +1,6 @@
+/virtualenv2/
+/virtualenv/
+/.idea/
+/__pycache__/
+*.pyc
+jinja2-live-parser.log
