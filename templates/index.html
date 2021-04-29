@@ -41,41 +41,34 @@
         <li>
           <input
             type="button"
-            value="Render"
+            value="Startup"
+            name="btnStartup"
             title="This link will create a new window or will re-use an already opened one"
-            onclick="window.open('/','render');this.disabled=false;"
-            />
-        </li>
-        <li>
-          <input
-            type="button"
-            value="Values"
-            title="This link will create a new window or will re-use an already opened one"
-            onclick="window.open('/values','values');this.disabled=true;"
-            />
-        </li>
-        <li>
-          <input
-            type="button"
-            value="Template"
-            title="This link will create a new window or will re-use an already opened one"
-            onclick="window.open('/template','template');this.disabled=true;"
+            onclick="window.open('/template','template');
+                this.disabled=true;
+                window.open('/values','values');
+                document.getElementById('btnTemplate').disabled = false;
+                document.getElementById('btnValues').disabled = false;"
             />
         </li>
                   <li>
           <input
             type="button"
+            name="btnValues"
+            disabled="true"
             value="Values reopen"
-            title="This link will create a new window or will re-use an already opened one"
-            onclick="window.open('','values');this.disabled=false;"
+            title="This button will open the values page"
+            onclick="window.open('','values');"
             />
         </li>
         <li>
           <input
             type="button"
+            name="btnTemplate"
+            disabled="true"
             value="Template reopen"
-            title="This link will create a new window or will re-use an already opened one"
-            onclick="window.open('','template');this.disabled=false;"
+            title="This link will open the templates page"
+            onclick="window.open('','template');"
             />
         </li>
       </ul>
